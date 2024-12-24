@@ -12,7 +12,16 @@ public class PersonalComputer extends Product {
         this.motherboard = motherboard;
     }
 
-    public ComputerCase getComputerCase() {
+    private void drawLogo() {
+        monitor.drawPixelAt(1200, 50, "yellow");
+    }
+
+    public void powerUp() {
+        computerCase.pressPowerButton();
+        drawLogo();
+    }
+
+    /*public ComputerCase getComputerCase() {
         return computerCase;
     }
 
@@ -20,7 +29,7 @@ public class PersonalComputer extends Product {
         return monitor;
     }
 
-    public Motherboard motherboard() {
+    public Motherboard getMotherboard() {
         return motherboard;
-    }
+    }*/
 }
